@@ -1,0 +1,50 @@
+.todo{
+  //border: 1px solid #eeeeee;
+  //background-color: lightgrey;
+  padding:10px;
+  display: flex;
+  cursor: pointer;
+  transition: background 0.3s;
+
+
+  p, input{
+    margin: 0 !important;
+  }
+
+  > :first-child{
+    margin-right: 10px;
+  }
+
+  &:hover{
+    background-color: #f0f0f0;
+  }
+}
+
+.sub-text{
+  color: #999;
+}
+
+.todo-completed{
+  p, .sub-text{
+    color: #aaa;
+    text-decoration: line-through;
+  }
+}
+
+.del-btn{
+  background-color: #c0392b;
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+.edit-btn{
+  background-color: #3498db;
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+.save-btn {
+  background-color: #2ecc71;
+  margin-bottom: 0;
+  border-radius: 10px;
+  margin-top: 5px;
+  float: right;
+}
