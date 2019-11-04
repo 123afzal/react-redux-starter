@@ -27,7 +27,8 @@ const initialState = {
             dueDate: moment().add(6,'day').unix(),
             completedAt: undefined
         }],
-    activeItem:0
+    activeItem:0,
+    todo: {}
 };
 
 const todos_reducer = (state = initialState, action) => {
@@ -55,6 +56,26 @@ const todos_reducer = (state = initialState, action) => {
                     ...state.todos
                 ]
             };
+        case 'EDIT_TODO':
+            let todo = state.todos.find(obj => obj.id === action.id);
+            return {
+                ...state,
+                todo:{...todo}
+            };
+        case 'SAVE_EDIT_TODO':
+            return {
+                ...state,
+                todo: {},
+                todos: state.todos.map((todo) => {
+                    if(action.id === todo.id){
+                        return {
+                             ...action.editedTodo
+                        }
+                    } else {
+                        return todo
+                    }
+                })
+            }
         case 'CHANGE_CURRENT_NAV':
             return {
                 ...state,

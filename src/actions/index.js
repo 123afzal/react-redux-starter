@@ -27,15 +27,35 @@ export const addTodo = (obj) => (dispatch) => {
         type: 'ADD_TODO',
         todo
     });
-    dispatch({
-        type: 'CHANGE_CURRENT_NAV',
-        index:0
-    })
+    dispatch(changeIndex(0))
+
 };
+
+export const saveEditTodo = (obj) => (dispatch) => {
+    let todo = {
+        ...obj,
+        dueDate: moment(obj.dueDate).unix(),
+    };
+    dispatch({
+        type: 'SAVE_EDIT_TODO',
+        editedTodo: todo,
+        id:todo.id
+    });
+    dispatch(changeIndex(0))
+};
+
 
 export const changeIndex = (index) => (dispatch) => {
     dispatch({
         type: 'CHANGE_CURRENT_NAV',
         index
     });
-}
+};
+
+export const editTodo = (id) =>  (dispatch) => {
+    dispatch({
+        type: 'EDIT_TODO',
+        id
+    });
+    dispatch(changeIndex(3))
+};

@@ -3,12 +3,15 @@ import moment from 'moment';
 
 
 import './todo.scss'
+import {bindActionCreators} from "redux";
+import {editTodo} from "../../actions";
+import {connect} from "react-redux";
+import {browserHistory} from 'react-router'
 class Todo extends Component {
     constructor(props) {
         super(props);
 
         this._renderDates = this._renderDates.bind(this);
-        // this._onEditTodo = this._onEditTodo.bind(this);
     }
 
     _renderDates = () => {
@@ -21,8 +24,7 @@ class Todo extends Component {
             message = "Completed at";
             timeStrap = completedAt
         }
-        return message + ' ' + moment.unix(timeStrap).format('MMM Do YYYY @ h:mm a') + '\n' +
-            'Due date' + '' + moment.unix(dueDate).format('MMM Do YYYY @ h:mm a')
+        return message + ' ' + moment.unix(timeStrap).format('MMM Do YYYY @ h:mm a') + 'Due date' + ' ' + moment.unix(dueDate).format('MMM Do YYYY @ h:mm a');
     };
 
     render() {
@@ -38,15 +40,36 @@ class Todo extends Component {
                 <div>
                     <p>{todo}</p>
                     <p className="sub-text pre-line">{this._renderDates()}</p>
-                    {/*<button className="button edit-btn"*/}
-                    {/*        onClick={this._onEditTodo}*/}
-                    {/*        >*/}
-                    {/*    Edit*/}
-                    {/*</button>*/}
+                    <button className="button edit-btn"
+                            onClick={()=> {
+                                this.props.actions.editTodo(id);
+                                browserHistory.push(`editodo/${id}`)
+                            }}
+                            >
+                        Edit
+                    </button>
                 </div>
             </div>
         )
     }
 }
 
-export default Todo;
+/* Map state to props */
+// const mapStateToProps = (state) => {
+//     let data = state.todos;
+//     return {
+//         todos: data.todos
+//     };
+// };
+
+/* Map Actions to Props */
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators({
+            editTodo
+        }, dispatch)
+    };
+};
+
+/* Connect Component with Redux */
+export default connect(null, mapDispatchToProps)(Todo);

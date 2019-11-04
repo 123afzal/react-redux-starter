@@ -4,10 +4,9 @@
     <list default="true" id="d8a1c831-f8d5-4b73-bbb8-5d61d1703f9b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-search/todo-search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-search/todo-search.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/todos-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todos-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/todo-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo-app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,7 +100,10 @@
       <workItem from="1572763718983" duration="11000" />
       <workItem from="1572763758428" duration="3226000" />
       <workItem from="1572767749825" duration="17181000" />
-      <workItem from="1572852881932" duration="611000" />
+      <workItem from="1572852881932" duration="1436000" />
+      <workItem from="1572856668051" duration="2313000" />
+      <workItem from="1572863587638" duration="2129000" />
+      <workItem from="1572866772021" duration="2915000" />
     </task>
     <servers />
   </component>

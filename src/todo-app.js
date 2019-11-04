@@ -17,7 +17,6 @@ class TodoApp extends React.Component {
                 {name:'Trashed', path:'trash'}, {name:'Add/Edit', path:'addtodo'}]
         };
         this._handleAddTodo = this._handleAddTodo.bind(this);
-        this._handleOnSearch = this._handleOnSearch.bind(this);
         this._handleToggle = this._handleToggle.bind(this);
         this._filteredTodos = this._filteredTodos.bind(this);
         this._renderList = this._renderList.bind(this);
@@ -77,13 +76,6 @@ class TodoApp extends React.Component {
                     completedAt: undefined
                 }
             ]
-        })
-    }
-
-    _handleOnSearch(handelText, showCompleted){
-        this.setState({
-            handelText: handelText,
-            showCompleted: showCompleted
         })
     }
 
