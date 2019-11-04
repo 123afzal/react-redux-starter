@@ -56,8 +56,7 @@ class PendingTodos extends React.Component {
 const mapStateToProps = (state) => {
     let data = state.todos;
     return {
-        todos: data.todos,
-        shoshowCompleted: data.showCompleted
+        todos: data.todos
     };
 };
 

@@ -27,4 +27,15 @@ export const addTodo = (obj) => (dispatch) => {
         type: 'ADD_TODO',
         todo
     });
+    dispatch({
+        type: 'CHANGE_CURRENT_NAV',
+        index:0
+    })
 };
+
+export const changeIndex = (index) => (dispatch) => {
+    dispatch({
+        type: 'CHANGE_CURRENT_NAV',
+        index
+    });
+}

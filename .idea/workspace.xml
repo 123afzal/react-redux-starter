@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8a1c831-f8d5-4b73-bbb8-5d61d1703f9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/add-todo/add-todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add-todo/add-todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo/todo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-search/todo-search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-search/todo-search.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/todos-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todos-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todo-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo-app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,17 +22,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>componentdi</find>
-      <find>_handleToggle</find>
-      <find>showc</find>
-      <find>ADD_TODO</find>
-    </findStrings>
-    <dirStrings>
-      <dir>E:\umai-todo-app-challenge\src</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +43,7 @@
       </list>
     </option>
   </component>
+  <component name="ProjectId" id="1T8s32u9p2mu0AlmfL3eC9uYVVS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -112,6 +101,7 @@
       <workItem from="1572763718983" duration="11000" />
       <workItem from="1572763758428" duration="3226000" />
       <workItem from="1572767749825" duration="17181000" />
+      <workItem from="1572852881932" duration="611000" />
     </task>
     <servers />
   </component>
@@ -123,7 +113,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

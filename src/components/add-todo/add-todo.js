@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import { browserHistory } from "react-router";
+import {connect} from "react-redux";
+import { bindActionCreators } from 'redux';
 
 import './add-todo.scss'
 import { addTodo } from '../../actions';
-import {connect} from "react-redux";
-import { bindActionCreators } from 'redux';
 
 class AddTodo extends Component {
     constructor(props) {
@@ -21,6 +22,7 @@ class AddTodo extends Component {
             this.refs.todo.value = "";
             this.refs.duedate.value = "";
             this.props.actions.addTodo({todoText, dueDate});
+            browserHistory.push("/")
         }
         else{
             this.refs.todo.focus();

@@ -26,7 +26,8 @@ const initialState = {
             createdAt: moment().unix(),
             dueDate: moment().add(6,'day').unix(),
             completedAt: undefined
-        }]
+        }],
+    activeItem:0
 };
 
 const todos_reducer = (state = initialState, action) => {
@@ -48,10 +49,16 @@ const todos_reducer = (state = initialState, action) => {
             };
         case 'ADD_TODO':
             return {
+                ...state,
                 todos:[
-                    ...state.todos,
-                    action.todo
+                    action.todo,
+                    ...state.todos
                 ]
+            };
+        case 'CHANGE_CURRENT_NAV':
+            return {
+                ...state,
+                activeItem: action.index
             };
         default:
             return state;

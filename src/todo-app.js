@@ -4,7 +4,8 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 import { connect } from  'react-redux';
-import { browserHistory } from 'react-router'
+import { browserHistory } from 'react-router';
+import { changeIndex } from './actions'
 
 
 import './todo-app.scss';
@@ -12,7 +13,6 @@ class TodoApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeItem: 0,
             items:[{name:'Home', path:'/'}, {name:'Completed', path: 'completetodos'},
                 {name:'Trashed', path:'trash'}, {name:'Add/Edit', path:'addtodo'}]
         };
@@ -91,9 +91,9 @@ class TodoApp extends React.Component {
         return(
             this.state.items.map((item, i) => {
                 return <li key={i}
-                           className={this.state.activeItem === i ? 'active': ''}
+                           className={this.props.activeItem === i ? 'active': ''}
                            onClick={() => {
-                               this.setState({activeItem:i});
+                               this.props.actions.changeIndex(i);
                                browserHistory.push(`${item.path}`)
                            }}
                 >
@@ -127,12 +127,16 @@ class TodoApp extends React.Component {
 }
 
 function mapStateToProps(state) {
-    return {};
+    return {
+        activeItem: state.todos.activeItem
+    };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({}, dispatch)
+        actions: bindActionCreators({
+            changeIndex
+        }, dispatch)
     };
 }
 
