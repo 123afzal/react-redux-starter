@@ -14,12 +14,13 @@ export const toggleTodo = (id) => (dispatch) => {
     });
 };
 
-export const addTodo = (text) => (dispatch) => {
+export const addTodo = (obj) => (dispatch) => {
     let todo = {
-        todo: text,
+        todo: obj.todoText,
         completed: false,
         createdAt: moment().unix(),
         completedAt: null,
+        dueDate: moment(obj.dueDate).unix(),
         id: uuid(),
     };
     dispatch({

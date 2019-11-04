@@ -12,7 +12,7 @@ class Todo extends Component {
     }
 
     _renderDates = () => {
-        let {completed, createdAt, completedAt} = this.props;
+        let {completed, createdAt, completedAt, dueDate} = this.props;
 
         let message = "Created at";
         let timeStrap = createdAt;
@@ -21,7 +21,8 @@ class Todo extends Component {
             message = "Completed at";
             timeStrap = completedAt
         }
-        return message + " " + moment.unix(timeStrap).format('MMM Do YYYY @ h:mm a');
+        return message + ' ' + moment.unix(timeStrap).format('MMM Do YYYY @ h:mm a') + '\n' +
+            'Due date' + '' + moment.unix(dueDate).format('MMM Do YYYY @ h:mm a')
     };
 
     render() {
@@ -36,7 +37,7 @@ class Todo extends Component {
                 </div>
                 <div>
                     <p>{todo}</p>
-                    <p className="sub-text">{this._renderDates()}</p>
+                    <p className="sub-text pre-line">{this._renderDates()}</p>
                     {/*<button className="button edit-btn"*/}
                     {/*        onClick={this._onEditTodo}*/}
                     {/*        >*/}

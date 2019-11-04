@@ -4,7 +4,6 @@ import './add-todo.scss'
 import { addTodo } from '../../actions';
 import {connect} from "react-redux";
 import { bindActionCreators } from 'redux';
-import { browserHistory } from 'react-router'
 
 class AddTodo extends Component {
     constructor(props) {
@@ -17,10 +16,11 @@ class AddTodo extends Component {
         e.preventDefault();
 
         let todoText = this.refs.todo.value;
-
-        if(todoText.length > 0){
+        let dueDate = this.refs.duedate.value;
+        if(todoText.length > 0 && dueDate){
             this.refs.todo.value = "";
-            this.props.actions.addTodo(todoText);
+            this.refs.duedate.value = "";
+            this.props.actions.addTodo({todoText, dueDate});
         }
         else{
             this.refs.todo.focus();
@@ -32,6 +32,11 @@ class AddTodo extends Component {
             <div className="add-todo">
                 <form onSubmit={this._onSubmit}>
                     <input type="text" ref="todo" placeholder="What do you need to do"/>
+
+                    <div className="due-date">
+                        <label htmlFor="date">Due Date :</label>
+                        <input type="date" ref="duedate"/>
+                    </div>
                     <button className="button expanded">Add Todo</button>
                 </form>
             </div>
