@@ -7,6 +7,7 @@ import PendingTodos from "./components/pending-todos/pending-todos";
 import CompletedTodos from "./components/complete-todos/complete-todos";
 import AddTodo from "./components/add-todo/add-todo";
 import EditTodo from "./components/edit-todo/edit-todo";
+import TrashedTodos from "./components/trashed-todos/trashed-todos";
 
 const Routes = () => {
     return (
@@ -17,6 +18,7 @@ const Routes = () => {
                 <Route path="completetodos" component={CompletedTodos}/>
                 <Route path="addtodo" component={AddTodo}/>
                 <Route path="editodo/:id" component={EditTodo}/>
+                <Route path="trash" component={TrashedTodos}/>
             </Route>
         </Router>
     )

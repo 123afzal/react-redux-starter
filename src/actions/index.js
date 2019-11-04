@@ -51,6 +51,13 @@ export const deleteTodo = (id) => (dispatch) => {
     })
 };
 
+export const restoreTodo = (id) =>  (dispatch) => {
+    dispatch({
+        type:'RESTORE_TODO',
+        id
+    })
+};
+
 
 export const changeIndex = (index) => (dispatch) => {
     dispatch({

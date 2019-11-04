@@ -16,12 +16,12 @@ class PendingTodos extends React.Component {
         this._filteredTodos = this._filteredTodos.bind(this);
     }
 
-    _filteredTodos(showCompleted, todos) {
+    _filteredTodos(todos) {
         let filteredTodos = todos;
 
         //filtered by showCompleted
         filteredTodos = todos.filter((todo) => {
-            return !todo.completed || showCompleted;
+            return !todo.completed;
         });
 
         return filteredTodos;
@@ -32,13 +32,22 @@ class PendingTodos extends React.Component {
     }
 
     _renderTodos(){
-        let {todos, showCompleted} = this.props;
-        let filterTodos = this._filteredTodos(showCompleted, todos);
-        console.log("todos", todos);
+        let {todos} = this.props;
+        let filterTodos = this._filteredTodos(todos);
         return (
-            filterTodos.map((todo) => {
-                return <Todo {...todo} key={todo.id} onToggle={this._handleToggle} showEdit={true}/>
-            })
+            filterTodos.length > 0 ?
+                filterTodos.map((todo) => {
+                    return <Todo {...todo}
+                                 key={todo.id}
+                                 onToggle={this._handleToggle}
+                                 showEdit={true}
+                                 showDelete={true}
+                    />
+                })
+                :
+                <div className="nothing">
+                    No pending todos..!
+                </div>
         )
     }
     render() {

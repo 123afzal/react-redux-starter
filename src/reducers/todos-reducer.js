@@ -84,6 +84,13 @@ const todos_reducer = (state = initialState, action) => {
                 todos: state.todos.filter(todo => todo.id !== action.id),
                 trashedTodos: [todoToDelete, ...state.trashedTodos]
             };
+        case 'RESTORE_TODO':
+            let todoToRestore = state.trashedTodos.find(todo => todo.id === action.id);
+            return  {
+                ...state,
+                todos: [todoToRestore, ...state.todos],
+                trashedTodos: state.trashedTodos.filter(todo => todo.id !== action.id)
+            }
         case 'CHANGE_CURRENT_NAV':
             return {
                 ...state,

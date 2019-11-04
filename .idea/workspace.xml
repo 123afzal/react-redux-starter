@@ -9,6 +9,8 @@
       <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo/todo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/todos-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todos-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todo-app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo-app.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +107,7 @@
       <workItem from="1572856668051" duration="2313000" />
       <workItem from="1572863587638" duration="2129000" />
       <workItem from="1572866772021" duration="3047000" />
-      <workItem from="1572871066998" duration="2906000" />
+      <workItem from="1572871066998" duration="4808000" />
     </task>
     <servers />
   </component>

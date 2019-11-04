@@ -26,11 +26,20 @@ class CompletedTodos extends React.Component {
     _renderTodos(){
         let {todos} = this.props;
         let filterTodos = this._filteredTodos(todos);
-        console.log("filterTodos", filterTodos);
         return (
-            filterTodos.map((todo) => {
-                return <Todo {...todo} key={todo.id} onToggle={this._handleToggle} showEdit={false}/>
-            })
+            filterTodos.length > 0 ?
+                filterTodos.map((todo) => {
+                    return <Todo {...todo}
+                                 key={todo.id}
+                                 onToggle={this._handleToggle}
+                                 showEdit={false}
+                                 showDelete={true}
+                    />
+                })
+                :
+                <div className="nothing">
+                    No completed todos yet..!
+                </div>
         )
     }
     render() {
