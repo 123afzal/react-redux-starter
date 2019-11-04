@@ -37,7 +37,7 @@ class PendingTodos extends React.Component {
         console.log("todos", todos);
         return (
             filterTodos.map((todo) => {
-                return <Todo {...todo} key={todo.id} onToggle={this._handleToggle}/>
+                return <Todo {...todo} key={todo.id} onToggle={this._handleToggle} showEdit={true}/>
             })
         )
     }
@@ -55,6 +55,7 @@ class PendingTodos extends React.Component {
 /* Map state to props */
 const mapStateToProps = (state) => {
     let data = state.todos;
+    console.log(data);
     return {
         todos: data.todos
     };

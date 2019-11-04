@@ -44,6 +44,13 @@ export const saveEditTodo = (obj) => (dispatch) => {
     dispatch(changeIndex(0))
 };
 
+export const deleteTodo = (id) => (dispatch) => {
+    dispatch({
+        type:'DELETE_TODO',
+        id
+    })
+};
+
 
 export const changeIndex = (index) => (dispatch) => {
     dispatch({

@@ -29,7 +29,7 @@ class CompletedTodos extends React.Component {
         console.log("filterTodos", filterTodos);
         return (
             filterTodos.map((todo) => {
-                return <Todo {...todo} key={todo.id} onToggle={this._handleToggle}/>
+                return <Todo {...todo} key={todo.id} onToggle={this._handleToggle} showEdit={false}/>
             })
         )
     }

@@ -28,7 +28,8 @@ const initialState = {
             completedAt: undefined
         }],
     activeItem:0,
-    todo: {}
+    todo: {},
+    trashedTodos: []
 };
 
 const todos_reducer = (state = initialState, action) => {
@@ -75,7 +76,14 @@ const todos_reducer = (state = initialState, action) => {
                         return todo
                     }
                 })
-            }
+            };
+        case 'DELETE_TODO':
+            let todoToDelete = state.todos.find(todo => todo.id === action.id);
+            return {
+                ...state,
+                todos: state.todos.filter(todo => todo.id !== action.id),
+                trashedTodos: [todoToDelete, ...state.trashedTodos]
+            };
         case 'CHANGE_CURRENT_NAV':
             return {
                 ...state,

@@ -21,6 +21,13 @@
   .pre-line{
     white-space: pre-line;
   }
+  .render-controls{
+    margin-top: 10px;
+    text-align: center;
+    .del-btn{
+      margin-left: 10px;
+    }
+  }
 }
 
 .sub-text{
@@ -38,6 +45,9 @@
   background-color: #c0392b;
   margin-bottom: 0;
   border-radius: 10px;
+  &:hover{
+    background-color: #fe4836;
+  }
 }
 .edit-btn{
   background-color: #3498db;
