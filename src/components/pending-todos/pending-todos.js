@@ -17,14 +17,7 @@ class PendingTodos extends React.Component {
     }
 
     _filteredTodos(todos) {
-        let filteredTodos = todos;
-
-        //filtered by showCompleted
-        filteredTodos = todos.filter((todo) => {
-            return !todo.completed;
-        });
-
-        return filteredTodos;
+        return todos ? todos.length > 0 ? todos.filter(todo => !todo.completed): [] : [];
     }
 
     _handleToggle(id){
@@ -51,7 +44,6 @@ class PendingTodos extends React.Component {
         )
     }
     render() {
-        console.log('ad');
         return (
             <div className="todo-list">
                 <h4>Pending Todos</h4>
@@ -64,7 +56,6 @@ class PendingTodos extends React.Component {
 /* Map state to props */
 const mapStateToProps = (state) => {
     let data = state.todos;
-    console.log(data);
     return {
         todos: data.todos
     };
