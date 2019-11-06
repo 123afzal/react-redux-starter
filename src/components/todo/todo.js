@@ -34,19 +34,20 @@ class Todo extends Component {
         return (
             <div className={todoClassName} >
                 {
-                    showDelete && <div onClick={
+                    showDelete && <div id="toggle-todo" onClick={
                         ()=>{this.props.onToggle(id)}
                     }>
                         <input type="checkbox" checked={completed} onChange={() => {completed = !completed}}/>
                     </div>
                 }
                 <div>
-                    <p>{todo}</p>
+                    <p className="todotext">{todo}</p>
                     <p className="sub-text pre-line">{this._renderDates()}</p>
                     <div className="render-controls">
                         {
                             showEdit ?
                             <button className="button edit-btn"
+                                    id="edit-btn"
                                     onClick={()=> {
                                         this.props.actions.editTodo(id);
                                         browserHistory.push(`editodo/${id}`)
@@ -58,6 +59,7 @@ class Todo extends Component {
                         {
                             showDelete ?
                             <button className="button del-btn"
+                                    id="del-btn"
                                     onClick={() => {
                                         this.props.actions.deleteTodo(id)
                                     }}
@@ -66,6 +68,7 @@ class Todo extends Component {
                             </button>
                                 :
                             <button className="button edit-btn"
+                                    id="restore-btn"
                                     onClick={() => {
                                         this.props.actions.restoreTodo(id)
                                     }}

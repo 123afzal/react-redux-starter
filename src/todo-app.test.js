@@ -9,38 +9,8 @@ configure({ adapter: new Adapter() });
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 import TodoApp from './todo-app';
-import uuid from "node-uuid";
-import moment from "moment";
 
-const initialState = {
-    todos: [
-        {
-            id: uuid(),
-            todo: "watch film",
-            completed: false,
-            createdAt: moment().unix(),
-            dueDate: moment().add(5,'day').unix(),
-            completedAt: undefined
-        },
-        {
-            id: uuid(),
-            todo: "go for walk",
-            completed: false,
-            createdAt: moment().unix(),
-            dueDate: moment().add(3,'day').unix(),
-            completedAt: undefined
-        },
-        {
-            id: uuid(),
-            todo: "go to gym",
-            completed: false,
-            createdAt: moment().unix(),
-            dueDate: moment().add(6,'day').unix(),
-            completedAt: undefined
-        }],
-    activeItem:0,
-    todo: {},
-    trashedTodos: []};
+import {initialState} from './utils/storeInnitialState';
 const mockStore = configureMockStore();
 const store = mockStore(initialState);
 
