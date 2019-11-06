@@ -8,10 +8,10 @@ configure({ adapter: new Adapter() });
 
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
-import PendingTodos from './pending-todos';
+import ConnectedPendingTodos, {PendingTodos} from './pending-todos';
 import uuid from "node-uuid";
 import moment from "moment";
-import TodoApp from "../../todo-app";
+import { act } from "react-dom/test-utils";
 
 const initialState = {
     todos: [

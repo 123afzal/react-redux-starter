@@ -6,7 +6,8 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo-app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pending-todos/pending-todos.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/todos-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todos-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +105,8 @@
       <workItem from="1572863587638" duration="2129000" />
       <workItem from="1572866772021" duration="3047000" />
       <workItem from="1572871066998" duration="5164000" />
-      <workItem from="1572933642420" duration="18137000" />
+      <workItem from="1572933642420" duration="24293000" />
+      <workItem from="1573019789125" duration="6283000" />
     </task>
     <servers />
   </component>

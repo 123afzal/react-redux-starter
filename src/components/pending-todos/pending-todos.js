@@ -44,6 +44,8 @@ class PendingTodos extends React.Component {
         )
     }
     render() {
+        let {todos} = this.props;
+        let filterTodos = this._filteredTodos(todos);
         return (
             <div className="todo-list">
                 <h4>Pending Todos</h4>
