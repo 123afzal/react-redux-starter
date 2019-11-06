@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -7,8 +7,9 @@ import { toggleTodo } from '../../actions';
 import './pending-todos.scss'
 
 
-class PendingTodos extends React.Component {
+class PendingTodos extends Component {
     constructor(props) {
+
         super(props);
 
         this._renderTodos = this._renderTodos.bind(this);
@@ -73,4 +74,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 /* Connect Component with Redux */
-export default connect(mapStateToProps, mapDispatchToProps)(PendingTodos);
+export default connect(mapStateToProps, mapDispatchToProps)(PendingTodos)
+export {PendingTodos as ComponentPendingTodos};
