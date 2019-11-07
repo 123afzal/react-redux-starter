@@ -71,4 +71,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 /* Connect Component with Redux */
-export default connect(mapStateToProps, mapDispatchToProps)(CompletedTodos);
+export default connect(mapStateToProps, mapDispatchToProps)(CompletedTodos)
+export {CompletedTodos as ComponentCompletedTodos};

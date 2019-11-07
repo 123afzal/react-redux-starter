@@ -49,4 +49,5 @@ const mapStateToProps = (state) => {
 
 
 /* Connect Component with Redux */
-export default connect(mapStateToProps, null)(TrashedTodos);
+export default connect(mapStateToProps, null)(TrashedTodos)
+export {TrashedTodos as ComponentTrashedTodos};

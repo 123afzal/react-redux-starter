@@ -8,29 +8,30 @@ configure({ adapter: new Adapter() });
 
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
+
 import {initialState} from '../../utils/storeInnitialState';
-import PendingTodos, {ComponentPendingTodos} from "./pending-todos";
+import TrashedTodos, {ComponentTrashedTodos} from "./trashed-todos";
 const mockStore = configureMockStore();
 const store = mockStore(initialState);
 
-describe("Pending Todos Component", () => {
+describe("Trashed Todos Component", () => {
 
     it("should render without throwing an error", () => {
         expect(
             shallow(
                 <Provider store={store}>
-                    <PendingTodos/>
+                    <TrashedTodos/>
                 </Provider>
             ).exists()
         ).toBe(true);
     });
 
-    it("should render todo text", async () => {
-        let wrapper = mount(
-            <Provider store={store}>
-                <ComponentPendingTodos {...initialState}/>
-            </Provider>);
-        // console.log(wrapper.debug());
-        expect(wrapper.find('Todo').length).toEqual(3);
-    });
+    // it("should render todo text", async () => {
+    //     let wrapper = mount(
+    //         <Provider store={store}>
+    //             <ComponentPendingTodos {...initialState}/>
+    //         </Provider>);
+    //     // console.log(wrapper.debug());
+    //     expect(wrapper.find('Todo').length).toEqual(3);
+    // });
 });
