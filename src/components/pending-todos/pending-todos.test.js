@@ -25,7 +25,7 @@ describe("Pending Todos Component", () => {
         ).toBe(true);
     });
 
-    it("should render todo text", async () => {
+    it("should render all pending todos", async () => {
         let wrapper = mount(
             <Provider store={store}>
                 <ComponentPendingTodos {...initialState}/>
