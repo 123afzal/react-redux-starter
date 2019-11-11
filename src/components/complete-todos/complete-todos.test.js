@@ -25,13 +25,16 @@ describe("Completed Todos Component", () => {
             ).exists()
         ).toBe(true);
     });
+    //mark one todo as completed for testing purpose
+    initialState.todos[0].completed = true;
 
-    // it("should render todo text", async () => {
-    //     let wrapper = mount(
-    //         <Provider store={store}>
-    //             <ComponentPendingTodos {...initialState}/>
-    //         </Provider>);
-    //     // console.log(wrapper.debug());
-    //     expect(wrapper.find('Todo').length).toEqual(3);
-    // });
+    it("should render only completed todo", async () => {
+        let wrapper = mount(
+            <Provider store={store}>
+                <ComponentCompletedTodos {...initialState}/>
+            </Provider>);
+        // console.log(wrapper.debug());
+        expect(wrapper.find('Todo').length).toEqual(1);
+    });
+
 });

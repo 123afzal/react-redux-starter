@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8a1c831-f8d5-4b73-bbb8-5d61d1703f9b" name="Default Changelist" comment="" />
+    <list default="true" id="d8a1c831-f8d5-4b73-bbb8-5d61d1703f9b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/complete-todos/complete-todos.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/complete-todos/complete-todos.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/trashed-todos/trashed-todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/trashed-todos/trashed-todos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/trashed-todos/trashed-todos.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/trashed-todos/trashed-todos.test.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +105,9 @@
       <workItem from="1572871066998" duration="5164000" />
       <workItem from="1572933642420" duration="24293000" />
       <workItem from="1573019789125" duration="23099000" />
-      <workItem from="1573128980350" duration="1179000" />
+      <workItem from="1573128980350" duration="2366000" />
+      <workItem from="1573453194821" duration="1046000" />
+      <workItem from="1573455856063" duration="1330000" />
     </task>
     <servers />
   </component>

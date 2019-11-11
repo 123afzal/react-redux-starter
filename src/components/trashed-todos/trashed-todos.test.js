@@ -26,12 +26,16 @@ describe("Trashed Todos Component", () => {
         ).toBe(true);
     });
 
-    // it("should render todo text", async () => {
-    //     let wrapper = mount(
-    //         <Provider store={store}>
-    //             <ComponentPendingTodos {...initialState}/>
-    //         </Provider>);
-    //     // console.log(wrapper.debug());
-    //     expect(wrapper.find('Todo').length).toEqual(3);
-    // });
+    // push two todos in trashed array for testing purpose;
+    initialState.trashedTodos.push(initialState.todos[0]);
+    initialState.trashedTodos.push(initialState.todos[1]);
+    initialState.todos.splice(0,2);
+    it("should render only 'Two' deleted todos", async () => {
+        let wrapper = mount(
+            <Provider store={store}>
+                <ComponentTrashedTodos {...initialState}/>
+            </Provider>);
+        // console.log(wrapper.debug());
+        expect(wrapper.find('Todo').length).toEqual(2);
+    });
 });

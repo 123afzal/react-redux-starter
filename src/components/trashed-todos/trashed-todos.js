@@ -12,10 +12,10 @@ class TrashedTodos extends React.Component {
 
 
     _renderTodos(){
-        let {todos} = this.props;
+        let {trashedTodos} = this.props;
         return (
-            todos.length > 0 ?
-                todos.map((todo) => {
+            trashedTodos.length > 0 ?
+                trashedTodos.map((todo) => {
                     return <Todo {...todo}
                                  key={todo.id}
                                  onToggle={this._handleToggle}
@@ -43,7 +43,7 @@ class TrashedTodos extends React.Component {
 const mapStateToProps = (state) => {
     let data = state.todos;
     return {
-        todos: data.trashedTodos
+        trashedTodos: data.trashedTodos
     };
 };
 
