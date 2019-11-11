@@ -1,5 +1,6 @@
 import moment from 'moment';
 import uuid from "node-uuid";
+import {todayDate} from '../utils/storeInnitialState'
 
 export const getTodos = () => (dispatch) => {
         dispatch({
@@ -18,10 +19,10 @@ export const addTodo = (obj) => (dispatch) => {
     let todo = {
         todo: obj.todoText,
         completed: false,
-        createdAt: moment().unix(),
+        createdAt: todayDate,
         completedAt: null,
-        dueDate: moment(obj.dueDate).unix(),
-        id: uuid(),
+        dueDate: obj.dueDate ? moment(obj.dueDate).unix() : moment().add(5,'day').unix(),
+        id: obj.id || uuid(),
     };
     dispatch({
         type: 'ADD_TODO',

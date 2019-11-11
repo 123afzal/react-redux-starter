@@ -4,6 +4,9 @@ import promiseMiddleware from "redux-promise-middleware";
 
 const mockStore = configureMockStore([thunk, promiseMiddleware]);
 import * as actions from './index'
+import {todayDate} from '../utils/storeInnitialState'
+import moment from "moment";
+import uuid from "node-uuid";
 
 describe('actions', () => {
     let store;

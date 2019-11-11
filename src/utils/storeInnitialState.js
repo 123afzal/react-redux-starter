@@ -31,3 +31,4 @@ export const initialState = {
     todo: {},
     trashedTodos: []
 };
+export const todayDate = moment().unix();
