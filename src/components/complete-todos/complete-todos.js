@@ -43,7 +43,6 @@ class CompletedTodos extends React.Component {
         )
     }
     render() {
-        console.log('ad');
         return (
             <div className="todo-list">
                 <h4>Completed Todos</h4>
