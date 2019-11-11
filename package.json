@@ -19,6 +19,7 @@
     "react-test-renderer": "^16.11.0",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
+    "sinon": "^7.5.0",
     "styled-components": "^4.4.1",
     "theme": "^0.1.0"
   },
