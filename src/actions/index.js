@@ -37,7 +37,6 @@ export const saveEditTodo = (obj) => (dispatch) => {
         ...obj,
         dueDate: moment(obj.dueDate).unix(),
     };
-    console.log(todo)
     dispatch({
         type: 'SAVE_EDIT_TODO',
         editedTodo: todo,
