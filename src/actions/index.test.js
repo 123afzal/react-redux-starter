@@ -72,6 +72,26 @@ describe('actions', () => {
         expect(store.getActions()[0]).toEqual(expectedAction);
     });
 
+    it('should create an action to SAVE EDITED TODO', () => {
+        const todo = {
+            todo: "testing edit todo text",
+            completed: false,
+            createdAt: todayDate,
+            completedAt: null,
+            dueDate: "2019-12-31",
+            id: uuid(),
+        };
+        const expectedAction = {
+            type: "SAVE_EDIT_TODO",
+            editedTodo: todo,
+            id:todo.id
+        };
+        //we divide here to take it in timestamp
+        todo.dueDate = moment(todo.dueDate/1000).unix();
+        store.dispatch(actions.saveEditTodo(todo));
+        expect(store.getActions()[0]).toEqual(expectedAction);
+    });
+
     it('should change NAVIGATION', () => {
         const index = 0;
         const expectedAction = {
