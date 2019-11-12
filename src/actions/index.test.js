@@ -25,6 +25,23 @@ describe('actions', () => {
         expect(store.getActions()[0]).toEqual(expectedAction);
     });
 
+    it('should create an action to ADD a NEW TODO', () => {
+        const todo = {
+            todo: "testing todo text",
+            completed: false,
+            createdAt: todayDate,
+            completedAt: null,
+            dueDate: moment().add(5,'day').unix(),
+            id: uuid(),
+        };
+        const expectedAction = {
+            type: "ADD_TODO",
+            todo
+        };
+        store.dispatch(actions.addTodo({todoText:'testing todo text', id: todo.id}));
+        expect(store.getActions()[0]).toEqual(expectedAction);
+    });
+
     it('should create an action to DELETE a TODO', () => {
         const id = '112121csdfsdf-dsf2df456sdf';
         const expectedAction = {
